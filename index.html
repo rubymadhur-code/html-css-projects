@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CSS Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0d0d0d;
+            color: #fff;
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px;
+
+        }
+
+        .header h2 {
+            font-size: 50px;
+            padding: 20px;
+            border-bottom: 1px solid #8f8c8c;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .card {
+            background: #222;
+            border-radius: 15px;
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card .content {
+            padding: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px 10px 0px 0px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #8f8c8c;
+        }
+
+        .card button {
+            width: 100%;
+            padding: 10px 20px;
+            background: #322f2f;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 5px aqua;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 15px aqua;
+        }
+
+        .card button a {
+            text-decoration: none;
+            color: aqua;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 30px 20px;
+            }
+
+            .header h2 {
+                font-size: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .card {
+                width: 100%;
+            }
+
+            .header h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h2>HTML CSS PROJECTS </h2>
+    </div>
+    <div class="container">
+
+        <div class="card">
+            <img src="login-form.png" alt="">
+            <div class="content">
+                <h3>Modern Glass Login Form</h3>
+                <button><a href="#">view live</a></button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0f172a;
+    overflow: hidden;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(100px);
+}
+
+body::before {
+    background: #ff4ecd;
+    top: 10%;
+    left: 10%;
+}
+
+body::after {
+    background: #4facfe;
+    bottom: 10%;
+    right: 10%;
+}
+
+.card {
+    width: 350px;
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.card h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    padding: 12px 12px;
+    width: 100%;
+}
+
+.input-group label {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label {
+    top: -12px;
+    font-size: 12px;
+    color: #4facfe;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #4facfe, #00f2fe);
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    box-shadow: 0 0 20px #4facfe;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.forgot {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.create {
+    font-size: 13px;
+    color: #4facfe;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.forgot:hover {
+    color: #fff;
+}
+.create {
+    text-shadow: 0 0 8px #4facfe;
+}
